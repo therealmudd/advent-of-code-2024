@@ -30,9 +30,6 @@ def solution(input_string: str) -> None:
 
     count = sum([row.count('X') for row in puzzle_map])
 
-
-    [print("".join(line)) for line in puzzle_map]
-
     return count
 
 def getIndex(lst, item):
