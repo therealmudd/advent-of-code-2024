@@ -6,15 +6,13 @@ import time
 
 def main():
     # Ensure the user provides the correct number of arguments
-    # if len(sys.argv) != 3:
-    #     print("Usage: python test.py <day_number> <part>")
-    #     sys.exit(1)
+    if len(sys.argv) != 3:
+        print("Usage: python test.py <day_number> <part>")
+        sys.exit(1)
 
-    # # Parse the day number and part number from command-line arguments
-    # day_number = sys.argv[1]
-    # part = sys.argv[2]
-    day_number = 7
-    part = 2
+    # Parse the day number and part number from command-line arguments
+    day_number = sys.argv[1]
+    part = sys.argv[2]
 
     # Validate that the folder exists
     day_folder = f"day_{day_number}"
@@ -42,7 +40,7 @@ def main():
 
     # Call the solution function
     total_time = 0
-    num_iterations = 1
+    num_iterations = 100
     for _ in range(num_iterations):
         start_time = time.time()
         result = solution_module.solution(input_string)
